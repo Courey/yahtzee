@@ -1,0 +1,75 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Yahtzee
+    link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.5.0-rc-1/pure-min.css')
+    link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.5.0-rc-1/grids-responsive-min.css')
+    link(rel='stylesheet', href='./css/app.css')
+  body
+    h1 Yahtzee
+    .pure-g
+      .pure-u-1
+        form.pure-form
+          fieldset
+            h3#newPlayer New Player
+            input#username(type="text", placeholder="Username")
+            input#avatar(type="text", placeholder="Avatar URL")
+
+            button#add.pure-button.pure-button-primary Add
+
+    .pure-g
+      .pure-u-1
+        form.pure-form
+          fieldset
+            h3 Scoring
+            input#score(type="text", placeholder="Score")
+
+
+            button#addscore.pure-button.pure-button-primary Add Score
+
+    .pure-g
+      .pure-u-1-3
+        #dice
+          img.dice(src='./media/1.png')
+          img.dice(src='./media/1.png')
+          img.dice(src='./media/1.png')
+          img.dice(src='./media/1.png')
+          img.dice(src='./media/1.png')
+      .pure-u-2-3
+        #rollbtn
+          button.pure-button.button-success#roll Roll Dice
+    .pure-g
+      .pure-u-1
+        #arrows
+          img.arrow#up(src='./media/up-arrow.png')
+          img.arrow#down(src='./media/down-arrow.png')
+          img.arrow#left(src='./media/left-arrow.png')
+          img.arrow#right(src='./media/right-arrow.png')
+
+    .pure-g
+      .pure-u-1
+        table#game.pure-table.pure-table-bordered
+          thead
+            tr
+              th Avatar
+              th Name
+              th 1
+              th 2
+              th 3
+              th 4
+              th 5
+              th 6
+              th 7
+              th 8
+              th 9
+              th 10
+              th 11
+              th 12
+              th 13
+              th Total
+          tbody
+
+    script(src='./js/vendor/jquery-2.1.0.js')
+    script(src='./js/source/main.js')
